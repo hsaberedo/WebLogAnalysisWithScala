@@ -30,17 +30,21 @@ On successful completion, an exit code of 0 is displayed:
 
 And you can check the Reports Directories to see the json format reports:
 
-**1. IP Based Report:**
+
+**1. URI Based Report:**
+
+_**Computing list of number of access by URI for each URI**_
+
+![image](https://user-images.githubusercontent.com/66680663/120110969-d4bed300-c167-11eb-9b19-25974288ce31.png)
+
+
+**2. IP Based Report:**
+
+_**Computing list of number of access per IP address for each IP address**_
 
 ![image](https://user-images.githubusercontent.com/66680663/120110845-37639f00-c167-11eb-9332-9c264a0b878b.png)
 
 ![image](https://user-images.githubusercontent.com/66680663/120110909-7e519480-c167-11eb-91bc-6cfa8f4d35ca.png)
-
-
-**2. URI Based Report:**
-
-![image](https://user-images.githubusercontent.com/66680663/120110969-d4bed300-c167-11eb-9b19-25974288ce31.png)
-
 
 
 ## How to run the program locally
