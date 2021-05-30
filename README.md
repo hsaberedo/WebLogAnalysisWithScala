@@ -34,16 +34,23 @@ spark-submit --master=local[*] --deploy-mode client --class App $JAR_PATH
 
 ## Runing the Project in IntelliJ
 
-CLone the project from Github into a local system. Eg. Ubuntum as follows:
+CLone the project from Github into a local system. Eg. Ubuntu as follows:
 
 git clone https://github.com/hsaberedo/WebLogAnalysisWithScala
 
 ![image](https://user-images.githubusercontent.com/66680663/120108651-12b6f980-c15e-11eb-9022-46214531a38a.png)
 
 
+
 Once the cloning is complete, you can start gui Intellij installed on the same platform and open the project as shown below:
 
+
 ![image](https://user-images.githubusercontent.com/66680663/120108737-72150980-c15e-11eb-961b-b3aa8faf71bd.png)
+
+
+And Run the project as shown below:
+![image](https://user-images.githubusercontent.com/66680663/120108935-39c1fb00-c15f-11eb-8945-ddfa10aec636.png)
+
 
 
 Make sure you include the app.run file as follows.
