@@ -59,39 +59,43 @@ _**Computing list of number of access per IP address for each IP address**_
 ## How to run the program locally
 
 
-## Packaging 
+1. **Packaging **
 
 To package the project:
 
-On the local unix system:
+Run sbt assembly to create single, executable JAR file:
 
 ```bash
-sbt assembly
+$ sbt assembly
 ```
 ![](cdn/1.png)
 
-## Deploying the program:
+And below is the screen shot of the sbt assemply:
 
-Upload OR Copy the fatjar to the desired target location
+![image](https://user-images.githubusercontent.com/66680663/120146038-636d3780-c1dc-11eb-8c25-b64370c1f9e5.png)
 
-```
-TARGET_LOCATION=<directory_location>
-cp target/scala-2.12/spark-sbt-template-assembly-1.0.jar $TARGET_LOCATION
-```
-
-![](cdn/2.png)
+2. **Next, run the JAR file:**
 
 ```
-JAR_PATH=$(pwd)/target/scala-2.12/spark-sbt-template-assembly-1.0.jar
-spark-submit --master=local[*] --deploy-mode client --class App $JAR_PATH
+TARGET_AREA=<directory_path>
+cp target/scala-2.12/spark-sbt-template-assembly-1.0.jar $TARGET_AREA
 ```
 
-![](cdn/3.png)
+```
+JAR_AREA=$(pwd)/target/scala-2.12/spark-sbt-template-assembly-1.0.jar
+spark-submit --master=local[*] --deploy-mode client --class App $JAR_AREA
+```
 
-Ensure that the App.run file is included as shown below:
 
-![image](https://user-images.githubusercontent.com/66680663/120112002-f8841800-c16b-11eb-8c5e-b159189a2bf5.png)
+## Deploying the Project on AWS
 
+You need to upload the access log file unto AWS S3 Bucket as shown below. This is achieved by clicking on **"Upload"** then **"Add Files"** from the S3 Bucket console in the imabe below: 
+
+![image](https://user-images.githubusercontent.com/66680663/120223394-6fd3ad80-c239-11eb-9909-49a0bbe16eee.png)
+
+
+
+and the generate fatjar to s3.
 
 
 
