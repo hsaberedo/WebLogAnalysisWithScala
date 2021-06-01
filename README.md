@@ -99,37 +99,37 @@ The project files with the jar file is also uploaded as shown below:
 
 
 
-2. 
+**2. Configure Amazon Map Reduce (EMR) Cluster with the jar specifications**
+
+i. Start an EMR cluster and provide necessary details..
 
 ![image](https://user-images.githubusercontent.com/66680663/120260946-cae3bf80-c28e-11eb-94a8-fc6ae96a1d37.png)
 
 
-On the Software Configuration section, use the default release (the last one)
+ii. On the Software Configuration section, use the default release (the last one)
 
 ![image](https://user-images.githubusercontent.com/66680663/120262371-84439480-c291-11eb-9679-0663056a93ab.png)
 
 
-7. On the Hardware configuration section, choose the instance type and the number of instances
+iii. On the Hardware configuration section, choose the instance type and the number of instances
 
 ![image](https://user-images.githubusercontent.com/66680663/120262042-0f705a80-c291-11eb-82cd-0c8fd0cd261a.png)
 
 
-8. On the Security and access section, use the Default values. Also select desired EC2 KeyPair
+iv. On the Security and access section, use the Default values. Also select desired EC2 KeyPair
 
 ![image](https://user-images.githubusercontent.com/66680663/120262222-4e9eab80-c291-11eb-80a1-53f8da85acc1.png)
 
 
-10. Click on Create cluster
+v. Click on Create cluster
 
-12. Click on the refresh icon to see the status passing from Starting to Running to Terminating — All steps completed
+vi.  Click on the refresh icon to see the status passing from Starting to Running to Terminating — All steps completed
 
-13. Add the jar file to the cluster specifying "Application Location" uploaded unto the S3 bucket with argument -s s3://project5datas3b1/access.log.gz -r s3://project5datas3b1/WebLogAnalysisWithScala/src/res/reports
+vii. Add the jar file to the cluster specifying "Application Location" uploaded unto the S3 bucket with argument -s s3://project5datas3b1/access.log.gz -r s3://project5datas3b1/WebLogAnalysisWithScala/src/res/reports
 
 Application Location is:
 s3://project5datas3b1/WebLogAnalysisWithScala/SparkLogAnalysis-assembly-1.0.jar
 
-And with 
-15. 
 
 
 
