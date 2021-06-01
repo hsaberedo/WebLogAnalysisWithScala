@@ -89,13 +89,48 @@ spark-submit --master=local[*] --deploy-mode client --class App $JAR_AREA
 
 ## Deploying the Project on AWS
 
-You need to upload the access log file unto AWS S3 Bucket as shown below. This is achieved by clicking on **"Upload"** then **"Add Files"** from the S3 Bucket console in the imabe below: 
+1. Login to AWS  and Upload access log file into S3 Bucket if existing, otherwise create one and do the Upload.
 
-![image](https://user-images.githubusercontent.com/66680663/120223394-6fd3ad80-c239-11eb-9909-49a0bbe16eee.png)
+This is achieved by clicking on **"Upload"** then **"Add Files"** from the S3 Bucket console in the image below: 
+
+The project files with the jar file is also uploaded as shown below:
+
+![image](https://user-images.githubusercontent.com/66680663/120263841-6c214480-c294-11eb-92a1-0546b81f344a.png)
 
 
 
-and the generate fatjar to s3.
+2. 
+
+![image](https://user-images.githubusercontent.com/66680663/120260946-cae3bf80-c28e-11eb-94a8-fc6ae96a1d37.png)
+
+
+On the Software Configuration section, use the default release (the last one)
+
+![image](https://user-images.githubusercontent.com/66680663/120262371-84439480-c291-11eb-9679-0663056a93ab.png)
+
+
+7. On the Hardware configuration section, choose the instance type and the number of instances
+
+![image](https://user-images.githubusercontent.com/66680663/120262042-0f705a80-c291-11eb-82cd-0c8fd0cd261a.png)
+
+
+8. On the Security and access section, use the Default values. Also select desired EC2 KeyPair
+
+![image](https://user-images.githubusercontent.com/66680663/120262222-4e9eab80-c291-11eb-80a1-53f8da85acc1.png)
+
+
+10. Click on Create cluster
+
+12. Click on the refresh icon to see the status passing from Starting to Running to Terminating — All steps completed
+
+13. Add the jar file to the cluster specifying "Application Location" uploaded unto the S3 bucket with argument -s s3://project5datas3b1/access.log.gz -r s3://project5datas3b1/WebLogAnalysisWithScala/src/res/reports
+
+Application Location is:
+s3://project5datas3b1/WebLogAnalysisWithScala/SparkLogAnalysis-assembly-1.0.jar
+
+And with 
+15. 
+
 
 
 
